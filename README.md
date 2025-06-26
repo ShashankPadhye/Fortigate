@@ -20,15 +20,15 @@ Python 3.6+
 Installation
 
 # Clone the repository
-git clone https://github.com/your-org/fgt_cfg_parser.git
-cd fgt_cfg_parser
+git clone https://github.com/ShashankPadhye/Fortigate.git
+cd Fortigate
 
 # (Optional) Make the script executable
-chmod +x fgt_cfg_parser.py
+chmod +x fortigate.py
 
 Usage
 
-python3 fgt_cfg_parser.py [--list-presets] -f <config_file> -p <pattern> [options]
+python3 fortigate.py [--list-presets] -f <config_file> -p <pattern> [options]
 # Options
 Option	Description
 --list-presets	List all built-in preset patterns and exit (no other flags required).
@@ -40,16 +40,16 @@ Option	Description
 
 Examples
 🔍 List presets
-python3 fgt_cfg_parser.py --list-presets
+python3 fortigate.py --list-presets
 
 Search a preset with default context
-python3 fgt_cfg_parser.py -f fortigate.conf -p admin-timeout
+python3 fortigate.py -f fortigate.conf -p admin-timeout
 
 Exact-match for lines
-python3 fgt_cfg_parser.py -f fortigate.conf -p ssh --exact
+python3 fortigate.py -f fortigate.conf -p ssh --exact
 
 Custom regex, short context, ignore case
-python3 fgt_cfg_parser.py \
+python3 fortigate.py \
   -f fortigate.conf \
   -p "^config firewall policy" \
   -c 5 --ignore-case
